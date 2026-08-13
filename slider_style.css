@@ -42,7 +42,7 @@
 
       display: flex;
       padding: 10px;
-      transition: .2s ease-out;
+      transition: .2s cubic-bezier(.08,.72,.26,.93);
     }
 
     .card .content {
