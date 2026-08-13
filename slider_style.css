@@ -24,7 +24,9 @@
     display: flex;
     justify-content: center;
     align-items: center;
+
     position: relative;
+    touch-action: pan-y;
     /* overflow-x: hidden; */
   }
 
@@ -39,8 +41,6 @@
 
     .card {
       background-color: rgb(150, 150, 150);
-
-      display: flex;
       padding: 10px;
       transition: .2s cubic-bezier(.08,.72,.26,.93);
     }
@@ -53,6 +53,7 @@
       width: 250px;
       height: 400px;
       pointer-events: none;
+      user-select: none;
 
     }
   }
