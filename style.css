@@ -1,0 +1,64 @@
+@layer reset {
+    * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    }
+
+    body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 98vh;
+    }
+}
+
+@layer swiper {
+.swiper {
+    background-color: rgb(187, 174, 174);
+    padding: 20px;
+    /* --needed-- */
+    width: 80vw;
+    touch-action: pan-y;
+    overflow: hidden;
+}
+.swiper .container {
+    background-color: rgb(134, 87, 87);
+    transition: .2s;
+    padding: 20px;
+    /* --needed-- */
+    display: flex;
+    gap: 20px;
+    width: max-content;
+}
+.swiper .container .card {
+    background-color: rgb(145, 57, 57);
+    flex-shrink: 0;
+    transition: .2s;
+    padding: 10px;
+}
+.swiper .container .card .content {
+    background-color: rgb(77, 34, 34);
+    color: rgb(196, 224, 243);
+
+    /* --needed-- */
+    width: 300px;
+    height: 360px;
+
+    pointer-events: none;
+    user-select: none;
+}
+.swiper .btn {
+    user-select: none;
+}
+.swiper .btn.disabled {
+    pointer-events: none;
+    opacity: .2;
+}
+.swiper .container, .swiper .container .card {
+    &.isDragging {
+        transition: none;
+    }
+}
+}
